@@ -17,7 +17,8 @@
 		"extras/cf-cli"
     ],
     "depends": [
-        "7zip"
+        "7zip",
+        "sudo"
     ],
     "suggest": {
         "Docker": "docker"
