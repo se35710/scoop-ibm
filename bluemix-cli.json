@@ -1,67 +1,67 @@
 {
-	"version": "0.5.1",
-	"homepage": "https://clis.ng.bluemix.net/ui/home.html",
-	"license": "https://console.ng.bluemix.net/docs/navigation/notices.html",
-	"architecture": {
-		"64bit": {
-			"url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.1_amd64.exe#/Bluemix_CLI-setup.exe",
-			"hash": "f31f9c6d1966e28e2d7bf1d04ef9d600d9e574a11fcf98ae6b6f4afff3edca25"
-		},
-		"32bit": {
-			"url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.1_386.exe#/Bluemix_CLI-setup.exe",
-			"hash": "c7d6bd00275823ee4393bca93a22e4dcf135e92d9817259d6565f2c74717a09d"
-		}
-	},
-	"_depends": [
-		"7zip",
-		"sudo",
-		"extras/cf-cli"
-	],
-	"depends": [
-		"7zip",
-		"sudo"
-	],
-	"suggest": {
-		"Docker": "docker"
-	},
-	"_pre_install": "sudo cmd /c $dir\\Bluemix_CLI-setup.exe /s /x /b\"$dir\" /v\"/qn\"
+    "version": "0.5.2",
+    "homepage": "https://clis.ng.bluemix.net/ui/home.html",
+    "license": "https://console.ng.bluemix.net/docs/navigation/notices.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.2_amd64.exe#/Bluemix_CLI-setup.exe",
+            "hash": "dfafd24a8f28bb64ec3055b75606a9eeda2dae9d97fe8edc29ce0b35111f022e"
+        },
+        "32bit": {
+            "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.2_386.exe#/Bluemix_CLI-setup.exe",
+            "hash": "415af2f5db184816ed2f23eb82099b459224320772f17cda0647ce18c92c1ed2"
+        }
+    },
+    "_depends": [
+        "7zip",
+        "sudo",
+        "extras/cf-cli"
+    ],
+    "depends": [
+        "7zip",
+        "sudo"
+    ],
+    "suggest": {
+        "Docker": "docker"
+    },
+    "_pre_install": "sudo cmd /c $dir\\Bluemix_CLI-setup.exe /s /x /b\"$dir\" /v\"/qn\"
 $cfcli = appdir(\"cf-cli\", $global)[0]
 pushd $dir
 7z e -bso0 -bd -- Bluemix_CLI.msi Data1.cab
 7z e -bso0 -bd -- Data1.cab
 cmd /c mklink /j cfcli \"$cfcli\\current\"
 popd",
-	"pre_install": "sudo cmd /c $dir\\Bluemix_CLI-setup.exe /s /x /b\"$dir\" /v\"/qn\"
+    "pre_install": "sudo cmd /c $dir\\Bluemix_CLI-setup.exe /s /x /b\"$dir\" /v\"/qn\"
 pushd $dir
 cmd /c 7z e -bso0 -bd -- Bluemix_CLI.msi Data1.cab
 cmd /c 7z e -bso0 -bd -- Data1.cab
 mkdir cfcli | Out-Null
 mv cf.exe cfcli
 popd",
-	"installer": {
-		"file": "bluemix.exe",
-		"keep": "true"
-	},
-	"bin": [
-		"bluemix.exe",
-		[
-			"bluemix.exe",
-			"bx"
-		],
-		"bluemix_analytics.exe"
-	],
-	"checkver": {
-		"url": "https://clis.ng.bluemix.net/info",
-		"re": "\"latestVersion\":\"([\\d\\.]+)\""
-	},
-	"autoupdate": {
-		"architecture": {
-			"64bit": {
-				"url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_$version_amd64.exe#/Bluemix_CLI-setup.exe"
-			},
-			"32bit": {
-				"url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_$version_386.exe#/Bluemix_CLI-setup.exe"
-			}
-		}
-	}
+    "installer": {
+        "file": "bluemix.exe",
+        "keep": "true"
+    },
+    "bin": [
+        "bluemix.exe",
+        [
+            "bluemix.exe",
+            "bx"
+        ],
+        "bluemix_analytics.exe"
+    ],
+    "checkver": {
+        "url": "https://clis.ng.bluemix.net/info",
+        "re": "\"latestVersion\":\"([\\d\\.]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_$version_amd64.exe#/Bluemix_CLI-setup.exe"
+            },
+            "32bit": {
+                "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_$version_386.exe#/Bluemix_CLI-setup.exe"
+            }
+        }
+    }
 }
