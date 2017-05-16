@@ -8,12 +8,13 @@
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
-        "bin\\bluemixUtility.bat",
-        "bin\\collective.bat",
+        [
+            "bin\\client.bat",
+            "wlp-client"
+        ],
         "bin\\configUtility.bat",
         "bin\\featureManager.bat",
         "bin\\installUtility.bat",
-        "bin\\pluginUtility.bat",
         "bin\\productInfo.bat",
         "bin\\securityUtility.bat",
         [
@@ -31,5 +32,5 @@
         "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/$version/wlp-javaeeClient7-$version.zip",
         "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/$version/lafiles/runtime/en.html"
     },
-    "notes": "server.bat is renamed to wlp"
+    "notes": "server.bat is renamed to wlp, client.bat is renamed to wlp-client"
 }

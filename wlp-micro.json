@@ -8,8 +8,6 @@
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
-        "bin\\bluemixUtility.bat",
-        "bin\\collective.bat",
         "bin\\configUtility.bat",
         "bin\\featureManager.bat",
         "bin\\installUtility.bat",

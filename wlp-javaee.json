@@ -9,8 +9,13 @@
     "bin": [
         "bin\\binaryLog.bat",
         "bin\\bluemixUtility.bat",
+        [
+            "bin\\client.bat",
+            "wlp-client"
+        ],
         "bin\\collective.bat",
         "bin\\configUtility.bat",
+        "bin\\ddlGen.bat",
         "bin\\featureManager.bat",
         "bin\\installUtility.bat",
         "bin\\pluginUtility.bat",
@@ -31,5 +36,5 @@
         "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/$version/wlp-javaee7-$version.zip",
         "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/$version/lafiles/runtime/en.html"
     },
-    "notes": "server.bat is renamed to wlp"
+    "notes": "server.bat is renamed to wlp, client.bat is renamed to wlp-client"
 }
