@@ -1,0 +1,35 @@
+{
+    "description": "IBM WAS Liberty with Java EE 7 Full Platform",
+    "homepage": "https://developer.ibm.com/wasdev/websphere-liberty/",
+    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/17.0.0.1/lafiles/runtime/en.html",
+    "version": "17.0.0.1",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/17.0.0.1/wlp-javaee7-17.0.0.1.zip",
+    "hash": "664c8c67cace5ec9e02d4aa95b95bf81989083597d8eaa9f62883cab68f05905",
+    "extract_dir": "wlp",
+    "bin": [
+        "bin\\binaryLog.bat",
+        "bin\\bluemixUtility.bat",
+        "bin\\collective.bat",
+        "bin\\configUtility.bat",
+        "bin\\featureManager.bat",
+        "bin\\installUtility.bat",
+        "bin\\pluginUtility.bat",
+        "bin\\productInfo.bat",
+        "bin\\securityUtility.bat",
+        [
+            "bin\\server.bat",
+            "wlp"
+        ],
+        "bin\\serverSchemaGen.bat"
+    ],
+    "persist": "usr",
+    "checkver": {
+        "url": "https://developer.ibm.com/wasdev/docs/new-latest-ga-download",
+        "re": "New release: WebSphere Liberty ([\\d.]+[\\d]+)"
+    },
+    "autoupdate": {
+        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/$version/wlp-javaee7-$version.zip",
+        "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/$version/lafiles/runtime/en.html"
+    },
+    "notes": "server.bat is renamed to wlp"
+}
