@@ -1,0 +1,43 @@
+{
+    "homepage": "https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/",
+    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/neon/lafiles/en.html",
+    "version": "17.0.0.1",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://version-to-train.azurewebsites.net/epp.package.jee.zip?version=4.6.3&architecture=64bit#/dl.7z",
+                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/neon/wdt-update-site_17.0.0.1.v20170227_1658.zip#/wdt"
+            ],
+            "hash": [
+                "sha512:460bd51ff71f1fff3b286e48b511615e2a946f2465ce435140562ac36a82a6ea1cf75a69027a5ce228014bfbda8a3c7be1ff4217e1d5e0c0e955fcf85ab807eb",
+                "sha512:dfdf8ba31db6aaa376aa5530755b04bf8c76b1c7800d61ed5a73d6c1da628d08689d52299b3b54916a93a6b6ccd66d5687b8556855f6452b8d15ca1c7cb674e1"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://version-to-train.azurewebsites.net/epp.package.jee.zip?version=4.6.3&architecture=32bit#/dl.7z",
+                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/neon/wdt-update-site_17.0.0.1.v20170227_1658.zip#/wdt"
+            ],
+            "hash": [
+                "sha512:236a83b4f9dc1560ff13507509ef23ded57c93d6b07c20f7afb48a84b28d101c5bc50f6fe4191648254b22acecb593f3ca1727746901bf48ad784bdd2de12c8f",
+                "sha512:dfdf8ba31db6aaa376aa5530755b04bf8c76b1c7800d61ed5a73d6c1da628d08689d52299b3b54916a93a6b6ccd66d5687b8556855f6452b8d15ca1c7cb674e1"
+            ]
+        }
+    },
+    "extract_dir": "eclipse",
+    "pre_install": "
+pushd $dir
+.\\eclipsec.exe -application org.eclipse.equinox.p2.director -noSplash -repository jar:file:///$dir/wdt!/,http://download.eclipse.org/releases/neon -installIU was4d -followReferences
+popd
+    ",
+    "shortcuts": [
+        [
+            "eclipse.exe",
+            "Eclipse IDE with IBM WebSphere Developer Tools"
+        ]
+    ],
+    "checkver": {
+        "url": "https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/",
+        "re": "libertytools-update-site_([\\d.]+[\\d]+).v(?<build>.*).zip"
+    }
+}
