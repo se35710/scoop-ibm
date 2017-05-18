@@ -13,22 +13,10 @@
         }
     },
     "depends": [
-        "7zip",
-        "sudo"
+        "7zip"
     ],
     "suggest": {
         "Docker": "docker"
-    },
-    "pre_install": "sudo cmd /c $dir\\Bluemix_CLI-setup.exe /s /x /b\"$dir\" /v\"/qn\"
-pushd $dir
-cmd /c 7z e -bso0 -bd -- Bluemix_CLI.msi Data1.cab
-cmd /c 7z e -bso0 -bd -- Data1.cab
-mkdir cfcli | Out-Null
-mv cf.exe cfcli
-popd",
-    "installer": {
-        "file": "bluemix.exe",
-        "keep": "true"
     },
     "bin": [
         "bluemix.exe",
@@ -38,6 +26,17 @@ popd",
         ],
         "bluemix_analytics.exe"
     ],
+    "pre_install": "
+pushd \"$dir\"
+saps \".\\Bluemix_CLI-setup.exe\" -argumentlist \"/s /x /b\"\"$dir\"\" /v\"\"/qn\"\"\" -wait
+7z e -bso0 -bd Bluemix_CLI.msi Data1.cab
+7z e -bso0 -bd Data1.cab
+mkdir cfcli > $null
+mv cf.exe cfcli
+popd",
+    "post_install": "
+bx plugin update --all
+",
     "checkver": {
         "url": "https://clis.ng.bluemix.net/all_versions",
         "jp": "$.[0].version"
