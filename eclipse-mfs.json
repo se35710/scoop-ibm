@@ -26,8 +26,8 @@
         }
     },
     "extract_dir": "eclipse",
-    "pre_install": "pushd $dir
-.\\eclipsec.exe -application org.eclipse.equinox.p2.director -noSplash -repository jar:file:///$dir/mfs!/,http://download.eclipse.org/releases/mars -installIU MFP -followReferences
+    "post_install": "pushd $dir
+.\\eclipsec.exe -application org.eclipse.equinox.p2.director -noSplash -repository jar:file:///$dir/mfs!/,http://download.eclipse.org/releases/mars,http://download.eclipse.org/thym/releases/latest -installIU MFP,org.eclipse.thym.feature.feature.group,org.eclipse.thym.feature.source.feature.group -followReferences
 popd",
     "shortcuts": [
         [
