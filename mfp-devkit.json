@@ -1,0 +1,22 @@
+{
+    "description": "IBM MobileFirst Developer Kit",
+    "homepage": "https://mobilefirstplatform.ibmcloud.com/",
+    "license": "https://mobilefirstplatform.ibmcloud.com/licenses/ipla/",
+    "version": "8.0.0.0-IF20170426-1210",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-8.0.0.0.exe?v20170426_1210#/mfp-devkit.exe",
+    "hash": "3d76c0e495c2b84703349eccb3e671fcc3dbc2a78c7ae5ce98db434386d598d6",
+    "pre_install": "pushd $dir
+$proc = start-process mfp-devkit.exe -wait -ea stop -argumentlist \"-i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=$dir\"
+popd",
+    "bin": [
+        [ "mfp-server\\bin\\server.bat", "mfp-server" ],
+        [ "console.cmd", "mfp-console" ]
+    ],
+    "checkver": {
+        "url": "https://mobilefirstplatform.ibmcloud.com/blog/tag/iFix_8.0/",
+        "re": "MobileFirst Foundation iFix ((?<bver>[\\d.]+[\\d]+)(?n:-IF)(?<bdate>[\\d]+)-(?<btime>[\\d]+)) released"
+    },
+    "autoupdate": {
+        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-$matchBver.exe?v$matchBdate_$matchBtime#/mfp-devkit.exe"
+    }
+}
