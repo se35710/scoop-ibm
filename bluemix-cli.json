@@ -5,11 +5,11 @@
     "architecture": {
         "64bit": {
             "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.3_amd64.exe#/Bluemix_CLI-setup.exe",
-            "hash": "sha1:27ad88d079da886fac5bd4b8be03fe377023e5fa"
+            "hash": "sha1:8bf8f6c6da8b9a7853d8481647634d678c75a0f3"
         },
         "32bit": {
             "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.3_386.exe#/Bluemix_CLI-setup.exe",
-            "hash": "sha1:9a8f179b25ca7755c13195612663efd0e35fafb0"
+            "hash": "sha1:6146faeda0e356399384c8dce43055b346e3a819"
         }
     },
     "depends": [
