@@ -26,7 +26,7 @@
         }
     },
     "extract_dir": "eclipse",
-    "pre_install": "pushd $dir
+    "post_install": "pushd $dir
 .\\eclipsec.exe -application org.eclipse.equinox.p2.director -noSplash -repository jar:file:///$dir/wdt!/,http://download.eclipse.org/releases/neon -installIU was4d -followReferences
 popd",
     "shortcuts": [
