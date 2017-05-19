@@ -5,11 +5,11 @@
     "version": "8.0.0.0-IF20170426-1210",
     "url": [
         "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-8.0.0.0.exe?v20170426_1210#/mfp-devkit.exe",
-        "https://gist.githubusercontent.com/se35710/43693e679701387d722206eff1e85f5f/raw/faabc0a0cd31d0122b8cdf02e568fb7ea08577a3/find-java.ps1"
+        "https://gist.githubusercontent.com/se35710/43693e679701387d722206eff1e85f5f/raw/0b00695e93c40d423c722fb544e468a85aae3dac/find-java.ps1"
     ],
     "hash": [
         "3d76c0e495c2b84703349eccb3e671fcc3dbc2a78c7ae5ce98db434386d598d6",
-        "4dbb3d086f76b495149e8e37911337023d7b479b8c982beef647fe5a0bb9814c"
+        "3f7f7275e24925334b8517831e06140b5271392f2de816a2f26739697e0a8b92"
     ],
     "pre_install": "pushd $dir
 .\\find-java.ps1 -SetSession
