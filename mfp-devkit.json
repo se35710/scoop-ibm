@@ -13,7 +13,7 @@
     ],
     "pre_install": "pushd $dir
 .\\find-java.ps1 -SetSession
-$proc = start-process mfp-devkit.exe -wait -ea stop -argumentlist \"-i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=$dir\"
+$proc = start-process mfp-devkit.exe -wait -ea stop -argumentlist \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"
 popd",
     "bin": [
         [ "mfp-server\\bin\\server.bat", "mfp-server" ],
