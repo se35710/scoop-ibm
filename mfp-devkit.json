@@ -3,9 +3,16 @@
     "homepage": "https://mobilefirstplatform.ibmcloud.com/",
     "license": "https://mobilefirstplatform.ibmcloud.com/licenses/ipla/",
     "version": "8.0.0.0-IF20170426-1210",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-8.0.0.0.exe?v20170426_1210#/mfp-devkit.exe",
-    "hash": "3d76c0e495c2b84703349eccb3e671fcc3dbc2a78c7ae5ce98db434386d598d6",
+    "url": [
+        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-8.0.0.0.exe?v20170426_1210#/mfp-devkit.exe",
+        "https://gist.githubusercontent.com/se35710/43693e679701387d722206eff1e85f5f/raw/f2806ac54ebba86df93f2a92ccf8d4fa7b101348/find-java.ps1"
+    ],
+    "hash": [
+        "3d76c0e495c2b84703349eccb3e671fcc3dbc2a78c7ae5ce98db434386d598d6",
+        "6bed602a285ead32cc0924e0e6c20f4e61b56c20920ac276585ee513b9f7342d"
+    ],
     "pre_install": "pushd $dir
+.\\find-java.ps1 -SetSession
 $proc = start-process mfp-devkit.exe -wait -ea stop -argumentlist \"-i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=$dir\"
 popd",
     "bin": [
