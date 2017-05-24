@@ -1,15 +1,26 @@
 {
     "homepage": "https://developer.ibm.com/node/sdk/v6",
     "version": "6.10.3.0",
-    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/6.10.3.0/win/x86_64/ibm-6.10.3.0-node-v6.10.3-win-x64.exe#/ibm-node.exe",
-            "hash": "489905c82b64a526efb4c861f1fed9b1f2237b42685ff3ebe1aa3b7c64ee7309"
+            "url": [
+                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/6.10.3.0/win/x86_64/ibm-6.10.3.0-node-v6.10.3-win-x64.exe#/ibm-node_install.exe",
+                "https://gist.githubusercontent.com/se35710/51b704d1bf24c70f1d5c0ef6c748641c/raw/31f682b468b8471698bc18db75a61f1a3ac2d980/ibm-node_uninstall.ps1"
+            ],
+            "hash": [
+                "489905c82b64a526efb4c861f1fed9b1f2237b42685ff3ebe1aa3b7c64ee7309",
+                "6f53395bb39625cf858149a7d6e4212c129d61478e9982af71555e554092b840"
+            ]
         },
         "32bit": {
-            "url": "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/6.10.3.0/win/i386/ibm-6.10.3.0-node-v6.10.3-win-x86.exe#/ibm-node.exe",
-            "hash": "71462a81116a3ead192178eb10f92f0fa7e9bfd6cb98e275e797086e8327a47a"
+            "url": [
+                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/6.10.3.0/win/i386/ibm-6.10.3.0-node-v6.10.3-win-x86.exe#/ibm-node_install.exe",
+                "https://gist.githubusercontent.com/se35710/51b704d1bf24c70f1d5c0ef6c748641c/raw/31f682b468b8471698bc18db75a61f1a3ac2d980/ibm-node_uninstall.ps1"
+            ],
+            "hash": [
+                "71462a81116a3ead192178eb10f92f0fa7e9bfd6cb98e275e797086e8327a47a",
+                "6f53395bb39625cf858149a7d6e4212c129d61478e9982af71555e554092b840"
+            ]
         }
     },
     "persist": [
@@ -20,17 +31,17 @@
         "bin"
     ],
     "depends": "extras/find-java",
-    "pre_install": "pushd $dir
-find-java -SetSession -Architecture $arch -Version 1.7
-$env:JAVA_HOME=$env:JRE_HOME
-$proc = start-process ibm-node.exe -wait -erroraction stop -argumentlist \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"
-popd",
+    "pre_install": "
+# InstallAnywhere requires Oracle JRE 1.7
+Push-Location $dir
+Find-Java -SetSession -Version 1.7 -Vendor Oracle
+$proc = Start-Process \"ibm-node_install.exe\" -Wait -ErrorAction Stop -ArgumentList \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"
+Pop-Location",
     "post_install": "
 # Set npm prefix to install modules inside bin
 Set-Content -Value \"prefix=$dir\\bin\" -Path $dir\\node_modules\\npm\\npmrc",
     "uninstaller": {
-        "file": "_node_installation\\uninstall.exe",
-        "args": [ "-i", "silent" ]
+        "file": "ibm-node_uninstall.ps1"
     },
     "checkver": {
         "url": "https://developer.ibm.com/node/sdk/v6/",
@@ -39,10 +50,10 @@ Set-Content -Value \"prefix=$dir\\bin\" -Path $dir\\node_modules\\npm\\npmrc",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/$version/win/x86_64/ibm-$version-node-v$majorVersion.$minorVersion.$patchVersion-win-x64.exe#/ibm-node.exe"
+                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/$version/win/x86_64/ibm-$version-node-v$majorVersion.$minorVersion.$patchVersion-win-x64.exe#/ibm-node_install.exe"
             },
             "32bit": {
-                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/$version/win/i386/ibm-$version-node-v$majorVersion.$minorVersion.$patchVersion-win-x86.exe#/ibm-node.exe"
+                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/$version/win/i386/ibm-$version-node-v$majorVersion.$minorVersion.$patchVersion-win-x86.exe#/ibm-node_install.exe"
             }
         },
         "hash": {
