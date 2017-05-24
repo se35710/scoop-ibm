@@ -22,6 +22,7 @@
     "depends": "extras/find-java",
     "pre_install": "pushd $dir
 find-java -SetSession -Architecture $arch -Version 1.7
+$env:JAVA_HOME=$env:JRE_HOME
 $proc = start-process ibm-node.exe -wait -erroraction stop -argumentlist \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"
 popd",
     "post_install": "
