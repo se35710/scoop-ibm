@@ -1,5 +1,5 @@
 {
-    "homepage": "https://developer.ibm.com/node/sdk/v6/",
+    "homepage": "https://developer.ibm.com/node/sdk/v6",
     "version": "6.10.3.0",
     "license": "MIT",
     "architecture": {
@@ -21,12 +21,16 @@
     ],
     "depends": "extras/find-java",
     "pre_install": "pushd $dir
-find-java -SetSession -Architecture $arch
+find-java -SetSession -Architecture $arch -Version 1.7
 $proc = start-process ibm-node.exe -wait -erroraction stop -argumentlist \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"
 popd",
     "post_install": "
 # Set npm prefix to install modules inside bin
 Set-Content -Value \"prefix=$dir\\bin\" -Path $dir\\node_modules\\npm\\npmrc",
+    "uninstaller": {
+        "file": "_node_installation\\uninstall.exe",
+        "args": [ "-i", "silent" ]
+    },
     "checkver": {
         "url": "https://developer.ibm.com/node/sdk/v6/",
         "re": "//public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/([\\d.]+)/win/"
