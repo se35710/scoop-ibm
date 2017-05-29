@@ -4,16 +4,20 @@
     "license": "https://mobilefirstplatform.ibmcloud.com/licenses/ipla/",
     "version": "8.0.0.0-IF20170426-1210",
     "url": [
-        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-8.0.0.0.exe?v20170426_1210#/mfp-devkit.exe"
+        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-8.0.0.0.exe?v20170426_1210#/_mfp-devkit.exe"
     ],
     "hash": [
         "3d76c0e495c2b84703349eccb3e671fcc3dbc2a78c7ae5ce98db434386d598d6"
     ],
-    "depends": "extras/find-java",
-    "pre_install": "pushd $dir
-find-java -SetSession -Version 1.7
-$proc = start-process mfp-devkit.exe -wait -erroraction stop -argumentlist \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"
-popd",
+    "depends": [ "extras/find-java", "ibm/nodejs-ibm" ],
+    "pre_install": "# InstallAnywhere requires Java
+Find-Java -SetSession
+$proc = Start-Process \"$dir\\_mfp-devkit.exe\" -Wait -ErrorAction Stop -ArgumentList \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"",
+    "post_install": "",
+    "uninstaller": {
+        "file:": "Uninstaller\\Uninstall.exe",
+        "args": [ "-i", "silent" ]
+    },
     "bin": [
         [ "mfp-server\\bin\\server.bat", "mfp-server" ],
         [ "console.cmd", "mfp-console" ]
@@ -23,6 +27,6 @@ popd",
         "re": "MobileFirst Foundation iFix ((?<bver>[\\d.]+[\\d]+)(?n:-IF)(?<bdate>[\\d]+)-(?<btime>[\\d]+)) released"
     },
     "autoupdate": {
-        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-$matchBver.exe?v$matchBdate_$matchBtime#/mfp-devkit.exe"
+        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-$matchBver.exe?v$matchBdate_$matchBtime#/_mfp-devkit.exe"
     }
 }
