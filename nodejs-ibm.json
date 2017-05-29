@@ -35,7 +35,7 @@
 # InstallAnywhere requires Oracle JRE 1.7
 Push-Location $dir
 Find-Java -SetSession -Version 1.7 -Vendor Oracle
-$proc = Start-Process \"_ibm-node_install.exe\" -Wait -ErrorAction Stop -ArgumentList \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"
+$proc = Start-Process \".\\_ibm-node_install.exe\" -Wait -ErrorAction Stop -ArgumentList \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"
 Pop-Location",
     "post_install": "
 # Set npm prefix to install modules inside bin
