@@ -1,0 +1,37 @@
+{
+    "description": "IBM MobileFirst Client",
+    "homepage": "https://mobilefirstplatform.ibmcloud.com/",
+    "license": "https://mobilefirstplatform.ibmcloud.com/licenses/ipla/",
+    "version": "7.1.0.0-MFPF-IF201705051403",
+    "url": [
+        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_cli_installer_7.1.0.zip?v20170505_1403#/dl.7z"
+    ],
+    "hash": [
+        "837c00cfc032633f9fe5d3c352979a90a654d27ded8fcbb25b3d53b0e67451a9"
+    ],
+    "extract_dir": "mobilefirst-cli-installer-7.1.0",
+    "pre_install": "Find-Java -SetSession
+$proc = Start-Process \"$dir\\install_windows.exe\" -Wait -ErrorAction Stop -ArgumentList \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\" -WindowStyle Hidden",
+    "uninstaller": {
+        "file:": "$dir\\Uninstaller\\Uninstall.exe",
+        "args": [ "-i", "silent" ]
+    },
+    "bin": [
+        [
+            "mfp.cmd",
+            "mfp"
+        ],
+        [
+            "mobilefirst.cmd",
+            "mobilefirst"
+        ]
+    ],
+    "checkver": {
+        "url": "https://mobilefirstplatform.ibmcloud.com/blog/tag/iFix_7.1/",
+        "re": "MobileFirst Platform Foundation iFix ((?<bver>[\\d.]+).(?<bpatch>[\\d]+)(?n:-MFPF-IF)(?<bdate>[\\d]{8})(?<btime>[\\d]{4})) released"
+    },
+    "autoupdate": {
+        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_cli_installer_$matchBver.zip?v$matchBdate_$matchBtime#/dl.7z",
+        "extract_dir": "mobilefirst-cli-installer-$matchBver"
+    }
+}
