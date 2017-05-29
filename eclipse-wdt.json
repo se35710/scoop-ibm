@@ -27,10 +27,8 @@
     },
     "depends": "extras/find-java",
     "extract_dir": "eclipse",
-    "post_install": "pushd $dir
-find-java -SetSession -Architecture $arch
-.\\eclipsec.exe -application org.eclipse.equinox.p2.director -noSplash -repository jar:file:///$dir/wdt!/,http://download.eclipse.org/releases/neon -installIU was4d -followReferences
-popd",
+    "post_install": "Find-Java -SetSession -Architecture $arch
+$proc = Start-Process \"$dir\\eclipsec.exe\" -WorkingDirectory \"$dir\" -Wait -ErrorAction Stop -ArgumentList \"-application org.eclipse.equinox.p2.director -noSplash -repository jar:file:///$dir/wdt!/,http://download.eclipse.org/releases/neon -installIU was4d -followReferences\" -WindowStyle Hidden",
     "shortcuts": [
         [
             "eclipse.exe",
