@@ -28,7 +28,7 @@ $proc = Start-Process \"$dir\\install_windows.exe\" -Wait -ErrorAction Stop -Arg
     ],
     "checkver": {
         "url": "https://mobilefirstplatform.ibmcloud.com/blog/tag/iFix_7.0/",
-        "re": "MobileFirst Platform Foundation iFix ((?<bver>[\\d.]+).(?<bpatch>[\\d]+)(?n:-MFPF-IF)(?<bdate>[\\d]{8})(?<btime>[\\d]{4})) released"
+        "re": "MobileFirst Platform Foundation iFix ((?<bver>[\\d.]+).(?<bpatch>[\\d]+)(?n:-MFPF-IF)(?<bdate>[\\d]{8})([-]*)(?<btime>[\\d]{4})) released"
     },
     "autoupdate": {
         "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_cli_installer_$matchBver.zip?v$matchBdate_$matchBtime#/dl.7z",
