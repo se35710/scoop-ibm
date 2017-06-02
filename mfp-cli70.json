@@ -2,9 +2,9 @@
     "description": "IBM MobileFirst Client",
     "homepage": "https://mobilefirstplatform.ibmcloud.com/",
     "license": "https://mobilefirstplatform.ibmcloud.com/licenses/ipla/",
-    "version": "7.0.0.0-MFPF-IF201611140235",
+    "version": "7.0.0.0-MFPF-IF20170505-1413",
     "url": [
-        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_cli_installer_7.0.0.zip?v20161114_0235#/dl.7z"
+        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_cli_installer_7.0.0.zip?v20170505_1413#/dl.7z"
     ],
     "hash": [
         "251edad4791bfdbd5e0e00ae5472e23aa0dda6295c95798edb5a974ca8bc4443"
@@ -14,7 +14,10 @@
 $proc = Start-Process \"$dir\\install_windows.exe\" -Wait -ErrorAction Stop -ArgumentList \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\" -WindowStyle Hidden",
     "uninstaller": {
         "file:": "$dir\\Uninstaller\\Uninstall.exe",
-        "args": [ "-i", "silent" ]
+        "args": [
+            "-i",
+            "silent"
+        ]
     },
     "bin": [
         [
