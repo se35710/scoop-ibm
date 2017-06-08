@@ -13,7 +13,9 @@
     "pre_install": "# InstallAnywhere requires Java
 Find-Java -SetSession
 $proc = Start-Process \"$dir\\_mfp-devkit.exe\" -Wait -ErrorAction Stop -ArgumentList \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"",
-    "post_install": "",
+    "post_install": "# Install mfp-cli
+scoop reset nodejs-ibm
+",
     "uninstaller": {
         "file:": "Uninstaller\\Uninstall.exe",
         "args": [ "-i", "silent" ]
