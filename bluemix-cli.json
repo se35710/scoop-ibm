@@ -16,7 +16,7 @@
         "7zip"
     ],
     "suggest": {
-        "Docker": "docker"
+        "Docker": "docker@1.12"
     },
     "bin": [
         "bluemix.exe",
