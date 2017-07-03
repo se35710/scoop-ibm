@@ -1,15 +1,15 @@
 {
-    "version": "0.5.4",
+    "version": "0.5.5",
     "homepage": "https://clis.ng.bluemix.net/ui/home.html",
     "license": "https://console.ng.bluemix.net/docs/navigation/notices.html",
     "architecture": {
         "64bit": {
-            "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.4_amd64.exe#/Bluemix_CLI-setup.exe",
-            "hash": "sha1:58741d693b9d34ad6054e93ad9a4b9bcce341b82"
+            "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.5_amd64.exe#/Bluemix_CLI-setup.exe",
+            "hash": "sha1:d1045a869100bb746a7bb496bf1dbee9390bfad0"
         },
         "32bit": {
-            "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.4_386.exe#/Bluemix_CLI-setup.exe",
-            "hash": "sha1:283992ac7902eaec5305c0b9295a3476e9078d06"
+            "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.5_386.exe#/Bluemix_CLI-setup.exe",
+            "hash": "sha1:07bd8b27d4fc238a4c61bb73e7382a41fb179f36"
         }
     },
     "depends": [
