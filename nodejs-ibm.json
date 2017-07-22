@@ -1,24 +1,24 @@
 {
     "homepage": "https://developer.ibm.com/node/sdk/v6",
-    "version": "6.11.0.0",
+    "version": "6.11.1.0",
     "architecture": {
         "64bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/6.11.0.0/win/x86_64/ibm-6.11.0.0-node-v6.11.0-win-x64.exe#/_ibm-node_install.exe",
+                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/6.11.1.0/win/x86_64/ibm-6.11.1.0-node-v6.11.1-win-x64.exe#/_ibm-node_install.exe",
                 "https://gist.githubusercontent.com/se35710/51b704d1bf24c70f1d5c0ef6c748641c/raw/31f682b468b8471698bc18db75a61f1a3ac2d980/ibm-node_uninstall.ps1#/_ibm-node_uninstall.ps1"
             ],
             "hash": [
-                "7ed9d64ec2c956d5bbfd810a147dd28c50a06b943740a0f50bba34b62cd67727",
+                "7b945678d09020499b01e6ab93eabbc1bd5b00ac9b3d296e8db3dc26296b184c",
                 "6f53395bb39625cf858149a7d6e4212c129d61478e9982af71555e554092b840"
             ]
         },
         "32bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/6.11.0.0/win/i386/ibm-6.11.0.0-node-v6.11.0-win-x86.exe#/_ibm-node_install.exe",
+                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/6.11.1.0/win/i386/ibm-6.11.1.0-node-v6.11.1-win-x86.exe#/_ibm-node_install.exe",
                 "https://gist.githubusercontent.com/se35710/51b704d1bf24c70f1d5c0ef6c748641c/raw/31f682b468b8471698bc18db75a61f1a3ac2d980/ibm-node_uninstall.ps1#/_ibm-node_uninstall.ps1"
             ],
             "hash": [
-                "0c52743828f35531cb3602fc65d1c15a6f4e976aa26d80e227cb91aa96de6029",
+                "19a31c7ea1bb289f2b807ea98f5c26f6d59234670ada71b5b8774c196c6d7daf",
                 "6f53395bb39625cf858149a7d6e4212c129d61478e9982af71555e554092b840"
             ]
         }
