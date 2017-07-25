@@ -1,12 +1,12 @@
 {
     "homepage": "https://developer.ibm.com/node/sdk/v8",
-    "version": "8.1.2.0",
+    "version": "8.1.4.0",
     "url": [
-        "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/8.1.2.0/win/x86_64/ibm-8.1.2.0-node-v8.1.2-win-x64.exe#/_ibm-node_install.exe",
+        "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/8.1.4.0/win/x86_64/ibm-8.1.4.0-node-v8.1.4-win-x64.exe#/_ibm-node_install.exe",
         "https://gist.githubusercontent.com/se35710/51b704d1bf24c70f1d5c0ef6c748641c/raw/31f682b468b8471698bc18db75a61f1a3ac2d980/ibm-node_uninstall.ps1#/_ibm-node_uninstall.ps1"
     ],
     "hash": [
-        "7303668f28060538c430a7e2e9c2a968485389f7fff554069ab2b9f52eba78cd",
+        "b0692392cfbe83b88616ab0901b3336bc71b2e45b28003cff9b398acd828944e",
         "6f53395bb39625cf858149a7d6e4212c129d61478e9982af71555e554092b840"
     ],
     "persist": [
