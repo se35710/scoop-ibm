@@ -2,11 +2,11 @@
     "description": "Eclipse IDE with IBM MobileFirst Studio",
     "homepage": "https://mobilefirstplatform.ibmcloud.com/",
     "license": "https://mobilefirstplatform.ibmcloud.com/licenses/ipla/",
-    "version": "8.0.0.v20170425_0443",
+    "version": "8.0.0.0-MFPF-IF20170803-1112",
     "architecture": {
         "64bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_studio_plugin_8.0.0.zip?v20170425_0443#/mfs",
+                "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_studio_plugin_8.0.0.zip?v20170803_1112?$matchBuild#/mfs",
                 "https://version-to-train.azurewebsites.net/epp.package.jee.zip?version=4.5.2&architecture=64bit#/dl.7z"
             ],
             "hash": [
@@ -16,7 +16,7 @@
         },
         "32bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_studio_plugin_8.0.0.zip?v20170425_0443#/mfs",
+                "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_studio_plugin_8.0.0.zip?v20170803_1112?$matchBuild#/mfs",
                 "https://version-to-train.azurewebsites.net/epp.package.jee.zip?version=4.5.2&architecture=32bit#/dl.7z"
             ],
             "hash": [
