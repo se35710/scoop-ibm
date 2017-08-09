@@ -36,16 +36,16 @@ $proc = Start-Process \"$dir\\eclipsec.exe\" -WorkingDirectory \"$dir\" -Wait -E
         ]
     ],
     "checkver": {
-        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mfpsupdate/features/",
-        "re": "com.ibm.mfp.feature_((?<version>[\\d.]+[\\d]+).(?<build>v[\\d]+_[\\d]+))"
+        "url": "https://mobilefirstplatform.ibmcloud.com/blog/tag/iFix_8.0/",
+        "re": "MobileFirst Foundation iFix ((?<bver>[\\d.]+).(?<bpatch>[\\d]+)(?n:-MFPF-IF)(?<bdate>[\\d]{8})([-]*)(?<btime>[\\d]{4})) released"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_studio_plugin_$matchVersion.zip?$matchBuild#/mfs"
+                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_studio_plugin_$matchBver.zip?v$matchBdate_$matchBtime?$matchBuild#/mfs"
             },
             "32bit": {
-                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_studio_plugin_$matchVersion.zip?$matchBuild#/mfs"
+                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_studio_plugin_$matchBver.zip?v$matchBdate_$matchBtime?$matchBuild#/mfs"
             }
         }
     }
