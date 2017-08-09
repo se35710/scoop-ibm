@@ -29,6 +29,6 @@ scoop reset nodejs-ibm
         "re": "MobileFirst Foundation iFix ((?<bver>[\\d.]+).(?<bpatch>[\\d]+)(?n:-MFPF-IF)(?<bdate>[\\d]{8})([-]*)(?<btime>[\\d]{4})) released"
     },
     "autoupdate": {
-        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-$matchBver.exe?v$matchBdate_$matchBtime#/_mfp-devkit.exe"
+        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-$matchBver.$matchBpatch.exe?v$matchBdate_$matchBtime#/_mfp-devkit.exe"
     }
 }
