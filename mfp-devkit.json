@@ -2,14 +2,17 @@
     "description": "IBM MobileFirst Developer Kit",
     "homepage": "https://mobilefirstplatform.ibmcloud.com/",
     "license": "https://mobilefirstplatform.ibmcloud.com/licenses/ipla/",
-    "version": "8.0.0.0-IF20170426-1210",
+    "version": "8.0.0.0-MFPF-IF20170803-1112",
     "url": [
-        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-8.0.0.0.exe?v20170426_1210#/_mfp-devkit.exe"
+        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-8.0.0.0.exe?v20170803_1112#/_mfp-devkit.exe"
     ],
     "hash": [
-        "3d76c0e495c2b84703349eccb3e671fcc3dbc2a78c7ae5ce98db434386d598d6"
+        "da74d922054c39fe49a0690f983ad6f5e522256510e857fe3a3c1b7838d3ab13"
     ],
-    "depends": [ "extras/find-java", "ibm/nodejs-ibm" ],
+    "depends": [
+        "extras/find-java",
+        "ibm/nodejs-ibm"
+    ],
     "pre_install": "# InstallAnywhere requires Java
 Find-Java -SetSession
 $proc = Start-Process \"$dir\\_mfp-devkit.exe\" -Wait -ErrorAction Stop -ArgumentList \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"",
@@ -18,11 +21,20 @@ scoop reset nodejs-ibm
 ",
     "uninstaller": {
         "file:": "Uninstaller\\Uninstall.exe",
-        "args": [ "-i", "silent" ]
+        "args": [
+            "-i",
+            "silent"
+        ]
     },
     "bin": [
-        [ "mfp-server\\bin\\server.bat", "mfp-server" ],
-        [ "console.cmd", "mfp-console" ]
+        [
+            "mfp-server\\bin\\server.bat",
+            "mfp-server"
+        ],
+        [
+            "console.cmd",
+            "mfp-console"
+        ]
     ],
     "checkver": {
         "url": "https://mobilefirstplatform.ibmcloud.com/blog/tag/iFix_8.0/",
