@@ -22,8 +22,8 @@
     ],
     "persist": "usr",
     "checkver": {
-        "url": "https://developer.ibm.com/wasdev/docs/new-latest-ga-download",
-        "re": "New release: WebSphere Liberty ([\\d.]+[\\d]+)"
+        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml",
+        "re": "/wlp/([\\d.]+)/wlp"
     },
     "autoupdate": {
         "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/$version/wlp-microProfile1-$version.zip",
