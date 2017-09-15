@@ -2,12 +2,12 @@
     "description": "IBM MobileFirst Client",
     "homepage": "https://mobilefirstplatform.ibmcloud.com/",
     "license": "https://mobilefirstplatform.ibmcloud.com/licenses/ipla/",
-    "version": "7.1.0.0-MFPF-IF201708211241",
+    "version": "7.1.0.0-MFPF-IF201709131648",
     "url": [
-        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_cli_installer_7.1.0.zip?v20170821_1241#/dl.7z"
+        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_cli_installer_7.1.0.zip?v20170913_1648#/dl.7z"
     ],
     "hash": [
-        "65154edee1418087044c93ebadc316cecf50c3e17fe4f5ca9c752c3c06e9ad52"
+        "81ff89232046df5024db4f6b53de2d538cc6770a5b1dc4e83d107a8a9d10077e"
     ],
     "extract_dir": "mobilefirst-cli-installer-7.1.0",
     "pre_install": "Find-Java -SetSession
