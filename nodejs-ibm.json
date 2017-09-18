@@ -24,7 +24,8 @@
         }
     },
     "persist": [
-        "bin"
+        "bin",
+        "cache"
     ],
     "env_add_path": [
         ".",
@@ -39,7 +40,7 @@ $proc = Start-Process \".\\_ibm-node_install.exe\" -Wait -ErrorAction Stop -Argu
 Pop-Location",
     "post_install": "
 # Set npm prefix to install modules inside bin
-Set-Content -Value \"prefix=$dir\\bin\" -Path $dir\\node_modules\\npm\\npmrc",
+Set-Content -Value \"prefix=$persist_dir\\bin`ncache=$persist_dir\\cache\" -Path $dir\\node_modules\\npm\\npmrc",
     "uninstaller": {
         "file": "_ibm-node_uninstall.ps1"
     },
