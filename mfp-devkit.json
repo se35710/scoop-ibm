@@ -19,13 +19,6 @@ $proc = Start-Process \"$dir\\_mfp-devkit.exe\" -Wait -ErrorAction Stop -Argumen
     "post_install": "# Install mfp-cli
 scoop reset nodejs-ibm
 ",
-    "uninstaller": {
-        "file:": "Uninstaller\\Uninstall.exe",
-        "args": [
-            "-i",
-            "silent"
-        ]
-    },
     "bin": [
         [
             "mfp-server\\bin\\server.bat",
