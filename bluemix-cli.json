@@ -1,23 +1,20 @@
 {
-    "version": "0.5.6",
+    "version": "0.6.1",
     "homepage": "https://clis.ng.bluemix.net/ui/home.html",
     "license": "https://console.ng.bluemix.net/docs/navigation/notices.html",
     "architecture": {
         "64bit": {
-            "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.6_amd64.exe#/Bluemix_CLI-setup.exe",
-            "hash": "sha1:355cd6a0496b761ec1778998dc0cef07570d3a42"
+            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.6.1/win64#/Bluemix_CLI-setup.exe",
+            "hash": "sha1:66f666ab3b7f0e2c6e0d8d4e4c309cdb685325f6"
         },
         "32bit": {
-            "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.6_386.exe#/Bluemix_CLI-setup.exe",
-            "hash": "sha1:e7f4564e5515ac315f523653a35eca61e2f5f4a6"
+            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.6.1/win32#/Bluemix_CLI-setup.exe",
+            "hash": "sha1:0150bdf839400522ce9d48656c8ccf5c514dc9c1"
         }
     },
     "depends": [
         "7zip"
     ],
-    "suggest": {
-        "Docker": "docker@1.12"
-    },
     "bin": [
         "bluemix.exe",
         [
@@ -35,27 +32,19 @@ Move-Item cf.exe cfcli >$null
 Pop-Location",
     "post_install": "bx plugin update --all",
     "checkver": {
-        "url": "https://clis.ng.bluemix.net/all_versions",
-        "jp": "$.[0].version"
+        "github": "https://github.com/IBM-Bluemix/bluemix-cli-release"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_$version_amd64.exe#/Bluemix_CLI-setup.exe",
-                "hash": {
-                    "mode": "json",
-                    "url": "https://clis.ng.bluemix.net/all_versions",
-                    "jp": "$.[0].binaries.win64.checksum"
-                }
+                "url": "https://clis.ng.bluemix.net/download/bluemix-cli/$version/win64#/Bluemix_CLI-setup.exe"
             },
             "32bit": {
-                "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_$version_386.exe#/Bluemix_CLI-setup.exe",
-                "hash": {
-                    "mode": "json",
-                    "url": "https://clis.ng.bluemix.net/all_versions",
-                    "jp": "$.[0].binaries.win32.checksum"
-                }
+                "url": "https://clis.ng.bluemix.net/download/bluemix-cli/$version/win32#/Bluemix_CLI-setup.exe"
             }
+        },
+        "hash": {
+            "url": "$url/checksum"
         }
     }
 }
