@@ -2,12 +2,12 @@
     "description": "IBM MobileFirst Developer Kit",
     "homepage": "https://mobilefirstplatform.ibmcloud.com/",
     "license": "https://mobilefirstplatform.ibmcloud.com/licenses/ipla/",
-    "version": "8.0.0.0-MFPF-IF20171025-0319",
+    "version": "8.0.0.0-MFPF-IF20171109-0349",
     "url": [
-        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-8.0.0.0.exe?v20171025_0319#/_mfp-devkit.exe"
+        "https://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst-deved-devkit-windows-8.0.0.0.exe?v20171109_0349#/_mfp-devkit.exe"
     ],
     "hash": [
-        "78b416804e4bd93ffe65af2b8b61ef613926af5781e887ecb56670bfd0ef04bd"
+        "9de75d32864e36c3962d6abb538475b99799af2f045ed96d78a9e31437786b9a"
     ],
     "depends": [
         "extras/find-java",
