@@ -1,0 +1,64 @@
+{
+    "homepage": "https://developer.ibm.com/node/sdk/v4",
+    "version": "4.8.5.0",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/4.8.5.0/win/x86_64/ibm-4.8.5.0-node-v4.8.5-win-x64.exe#/_ibm-node_install.exe",
+                "https://gist.githubusercontent.com/se35710/51b704d1bf24c70f1d5c0ef6c748641c/raw/31f682b468b8471698bc18db75a61f1a3ac2d980/ibm-node_uninstall.ps1#/_ibm-node_uninstall.ps1"
+            ],
+            "hash": [
+                "87eb41f59bcbe82ae1becb266c6d6afce20022213b61f6cb1e733617ab3fc91d",
+                "6f53395bb39625cf858149a7d6e4212c129d61478e9982af71555e554092b840"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/4.8.5.0/win/i386/ibm-4.8.5.0-node-v4.8.5-win-x86.exe#/_ibm-node_install.exe",
+                "https://gist.githubusercontent.com/se35710/51b704d1bf24c70f1d5c0ef6c748641c/raw/31f682b468b8471698bc18db75a61f1a3ac2d980/ibm-node_uninstall.ps1#/_ibm-node_uninstall.ps1"
+            ],
+            "hash": [
+                "27f2be43c27350c7f16f361c026cb49f7d4b5a77f646af253fd9114911db7947",
+                "6f53395bb39625cf858149a7d6e4212c129d61478e9982af71555e554092b840"
+            ]
+        }
+    },
+    "persist": [
+        "bin",
+        "cache"
+    ],
+    "env_add_path": [
+        ".",
+        "bin"
+    ],
+    "depends": "extras/find-java",
+    "pre_install": "
+# InstallAnywhere requires Oracle JRE 1.7
+Push-Location $dir
+Find-Java -SetSession -Version 1.7 -Vendor Oracle
+$proc = Start-Process \".\\_ibm-node_install.exe\" -Wait -ErrorAction Stop -ArgumentList \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"
+Pop-Location",
+    "post_install": "
+# Set npm prefix to install modules inside bin
+Set-Content -Value \"prefix=$persist_dir\\bin`ncache=$persist_dir\\cache\" -Path $dir\\node_modules\\npm\\npmrc",
+    "uninstaller": {
+        "file": "_ibm-node_uninstall.ps1"
+    },
+    "checkver": {
+        "url": "https://developer.ibm.com/node/sdk/v4/",
+        "re": "//public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/([\\d.]+)/win/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/$version/win/x86_64/ibm-$version-node-v$majorVersion.$minorVersion.$patchVersion-win-x64.exe#/_ibm-node_install.exe"
+            },
+            "32bit": {
+                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/$version/win/i386/ibm-$version-node-v$majorVersion.$minorVersion.$patchVersion-win-x86.exe#/_ibm-node_install.exe"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256.txt"
+        }
+    }
+}
