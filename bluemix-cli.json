@@ -25,8 +25,8 @@
     ],
     "pre_install": "Push-Location \"$dir\"
 Start-Process \"$dir\\Bluemix_CLI-setup.exe\" -Wait -ErrorAction Stop -ArgumentList \"/s /x /b\"\"$dir\"\" /v\"\"/qn\"\"\" -WindowStyle Hidden
-Start-Process \"7z.exe\" -WorkingDirectory \"$dir\" -Wait -ErrorAction Stop -ArgumentList \"e -bso0 -bd Bluemix_CLI.msi Data1.cab\" -WindowStyle Hidden
-Start-Process \"7z.exe\" -WorkingDirectory \"$dir\" -Wait -ErrorAction Stop -ArgumentList \"e -bso0 -bd Data1.cab\" -WindowStyle Hidden
+Start-Process \"7z.exe\" -WorkingDirectory \"$dir\" -Wait -ErrorAction Stop -ArgumentList \"e -y -bso0 -bd Bluemix_CLI.msi Data1.cab\" -WindowStyle Hidden
+Start-Process \"7z.exe\" -WorkingDirectory \"$dir\" -Wait -ErrorAction Stop -ArgumentList \"e -y -bso0 -bd Data1.cab\" -WindowStyle Hidden
 New-Item -ItemType Directory cfcli > $null
 Move-Item cf.exe cfcli >$null
 Pop-Location",
