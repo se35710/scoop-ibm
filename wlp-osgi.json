@@ -1,10 +1,10 @@
 {
     "description": "IBM WAS Liberty with OSGi Applications",
     "homepage": "https://developer.ibm.com/wasdev/websphere-liberty/",
-    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/17.0.0.2/lafiles/runtime/en.html",
-    "version": "17.0.0.2",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/17.0.0.2/wlp-osgi-17.0.0.2.zip",
-    "hash": "de55540d177c35dd424704f75e8646e8f1c0a279b3b9f544cf2c57cfe122cba6",
+    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/17.0.0.3/lafiles/runtime/en.html",
+    "version": "17.0.0.3",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/17.0.0.3/wlp-osgi-17.0.0.3.zip",
+    "hash": "1e5684453b73466b1789c2f1d1b4f0a94d95141e284f8c14c1c9cd1f0fc76159",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
@@ -25,7 +25,8 @@
     "persist": "usr",
     "checkver": {
         "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml",
-        "re": "/wlp/([\\d.]+)/wlp"
+        "reverse": true,
+        "re": "/wlp/([\\d]{2}.[\\d.]+)/wlp"
     },
     "autoupdate": {
         "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/$version/wlp-osgi-$version.zip",
