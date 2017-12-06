@@ -1,24 +1,24 @@
 {
     "homepage": "https://developer.ibm.com/node/sdk/v4",
-    "version": "4.8.5.0",
+    "version": "4.8.6.0",
     "architecture": {
         "64bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/4.8.5.0/win/x86_64/ibm-4.8.5.0-node-v4.8.5-win-x64.exe#/_ibm-node_install.exe",
+                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/4.8.6.0/win/x86_64/ibm-4.8.6.0-node-v4.8.6-win-x64.exe#/_ibm-node_install.exe",
                 "https://gist.githubusercontent.com/se35710/51b704d1bf24c70f1d5c0ef6c748641c/raw/31f682b468b8471698bc18db75a61f1a3ac2d980/ibm-node_uninstall.ps1#/_ibm-node_uninstall.ps1"
             ],
             "hash": [
-                "87eb41f59bcbe82ae1becb266c6d6afce20022213b61f6cb1e733617ab3fc91d",
+                "0e7f97f6b3311294d0ddd7e15f6591f1036af27e6d9db108ce9c9ed548248647",
                 "6f53395bb39625cf858149a7d6e4212c129d61478e9982af71555e554092b840"
             ]
         },
         "32bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/4.8.5.0/win/i386/ibm-4.8.5.0-node-v4.8.5-win-x86.exe#/_ibm-node_install.exe",
+                "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/4.8.6.0/win/i386/ibm-4.8.6.0-node-v4.8.6-win-x86.exe#/_ibm-node_install.exe",
                 "https://gist.githubusercontent.com/se35710/51b704d1bf24c70f1d5c0ef6c748641c/raw/31f682b468b8471698bc18db75a61f1a3ac2d980/ibm-node_uninstall.ps1#/_ibm-node_uninstall.ps1"
             ],
             "hash": [
-                "27f2be43c27350c7f16f361c026cb49f7d4b5a77f646af253fd9114911db7947",
+                "7ea6f9388f483969e69ce5e553f878c51491cf3c95d07d52f40c670e15635778",
                 "6f53395bb39625cf858149a7d6e4212c129d61478e9982af71555e554092b840"
             ]
         }
