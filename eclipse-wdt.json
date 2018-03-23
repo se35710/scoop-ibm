@@ -2,26 +2,26 @@
     "description": "Eclipse IDE with IBM WebSphere Developer Tools",
     "homepage": "https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/",
     "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/neon/lafiles/en.html",
-    "version": "17.0.0.2.v20170613_0418",
+    "version": "18.0.0.1.v20180313_0201",
     "architecture": {
         "64bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/neon/wdt-update-site_17.0.0.2.v20170613_0418.zip#/wdt",
-                "https://version-to-train.azurewebsites.net/epp.package.jee.zip?version=4.6.3&architecture=64bit#/dl.7z"
+                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/oxygen/wdt-update-site_18.0.0.1.v20180313_0201.zip#/wdt",
+                "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/2/eclipse-jee-oxygen-2-win32-x86_64.zip&r=1#/dl.7z"
             ],
             "hash": [
-                "280f71623c2508b6e3580c71aff5b2df06b9845f0a3c1060a6cd57d28496e5a4",
-                "sha512:460bd51ff71f1fff3b286e48b511615e2a946f2465ce435140562ac36a82a6ea1cf75a69027a5ce228014bfbda8a3c7be1ff4217e1d5e0c0e955fcf85ab807eb"
+                "f77d107144602b946d6fdb0f7d3bb1dfe1a022bd1f0aeb27cc9c97f2c28f7a15",
+                "sha512:1d299f5d2663586d5ecdd75d68f12d4b31a93daf73bcefc670882e339c1250444b68f7fe30d942fc4c821042181061e6129469af2351e052f8a10e08aabfeb36"
             ]
         },
         "32bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/neon/wdt-update-site_17.0.0.2.v20170613_0418.zip#/wdt",
-                "https://version-to-train.azurewebsites.net/epp.package.jee.zip?version=4.6.3&architecture=32bit#/dl.7z"
+                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/oxygen/wdt-update-site_18.0.0.1.v20180313_0201.zip#/wdt",
+                "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/2/eclipse-jee-oxygen-2-win32.zip&r=1#/dl.7z"
             ],
             "hash": [
-                "280f71623c2508b6e3580c71aff5b2df06b9845f0a3c1060a6cd57d28496e5a4",
-                "sha512:236a83b4f9dc1560ff13507509ef23ded57c93d6b07c20f7afb48a84b28d101c5bc50f6fe4191648254b22acecb593f3ca1727746901bf48ad784bdd2de12c8f"
+                "f77d107144602b946d6fdb0f7d3bb1dfe1a022bd1f0aeb27cc9c97f2c28f7a15",
+                "sha512:c5902d3c6a60dc0fb93c23d78c8945e0f54b4ce8a6f9fca18a37240c02b5f1b03979f2b3d25ba5eb49dd1b7269eeca1e802b88a248f3b4b5d6d320341b43e46c"
             ]
         }
     },
@@ -37,15 +37,15 @@ $proc = Start-Process \"$dir\\eclipsec.exe\" -WorkingDirectory \"$dir\" -Wait -E
     ],
     "checkver": {
         "url": "https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/",
-        "re": "libertytools-update-site_((?<version>[\\d.]+[\\d]+).(?<build>v[\\d]+_[\\d]+)).zip"
+        "re": "wdt/(?<release>[a-z]+)/wdt-update-site_((?<version>[\\d.]+[\\d]+).(?<build>v[\\d]+_[\\d]+)).zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/neon/wdt-update-site_$version.zip#/wdt"
+                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/$matchRelease/wdt-update-site_$version.zip#/wdt"
             },
             "32bit": {
-                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/neon/wdt-update-site_$version.zip#/wdt"
+                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/$matchRelease/wdt-update-site_$version.zip#/wdt"
             }
         }
     }
