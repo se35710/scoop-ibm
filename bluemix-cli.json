@@ -5,11 +5,11 @@
     "architecture": {
         "64bit": {
             "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.6.6/win64#/Bluemix_CLI-setup.exe",
-            "hash": "sha1:185eb45aadcd443512ebd086177f4a749709f29e"
+            "hash": "sha1:ad534199e18b9912b642d33650d85f6ef338469c"
         },
         "32bit": {
             "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.6.6/win32#/Bluemix_CLI-setup.exe",
-            "hash": "sha1:3108722f00d602fd51ebe76fc2a525722c67ad7b"
+            "hash": "sha1:83dc37f6e5f96f860b3103e2202b4aecf6bc6a07"
         }
     },
     "depends": [
