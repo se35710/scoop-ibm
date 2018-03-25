@@ -1,7 +1,7 @@
 {
     "description": "Eclipse IDE with IBM WebSphere Developer Tools",
     "homepage": "https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/",
-    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/neon/lafiles/en.html",
+    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/oxygen/lafiles/en.html",
     "version": "18.0.0.1.v20180313_0201",
     "architecture": {
         "64bit": {
