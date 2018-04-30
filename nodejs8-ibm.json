@@ -1,14 +1,12 @@
 {
     "homepage": "https://developer.ibm.com/node/sdk/v8",
     "version": "8.9.4.0",
-    "url": [
-        "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/8.9.4.0/win/x86_64/ibm-8.9.4.0-node-v8.9.4-win-x64.exe#/_ibm-node_install.exe",
-        "https://gist.githubusercontent.com/se35710/51b704d1bf24c70f1d5c0ef6c748641c/raw/31f682b468b8471698bc18db75a61f1a3ac2d980/ibm-node_uninstall.ps1#/_ibm-node_uninstall.ps1"
-    ],
-    "hash": [
-        "07569ca8082039a9453a29f2be51b76686ff867a1a44888e67dd7cf16f62639f",
-        "6f53395bb39625cf858149a7d6e4212c129d61478e9982af71555e554092b840"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/8.9.4.0/win/x86_64/ibm-8.9.4.0-node-v8.9.4-win-x64.exe#/_ibm-node_install.exe",
+            "hash": "8c2bba9c546c6bce70ffd6608db836ab87874080be39dc1136695fb642d335ad"
+        }
+    },
     "persist": [
         "bin",
         "cache"
@@ -17,25 +15,33 @@
         ".",
         "bin"
     ],
-    "depends": "extras/find-java",
-    "pre_install": "
-# InstallAnywhere requires Oracle JRE 1.7
-Push-Location $dir
-Find-Java -SetSession -Version 1.7 -Vendor Oracle
-$proc = Start-Process \".\\_ibm-node_install.exe\" -Wait -ErrorAction Stop -ArgumentList \"LAX_VM \"\"$($env:JRE_HOME)\\bin\\java.exe\"\" -i silent -DLICENSE_ACCEPTED=TRUE -DUSER_INSTALL_DIR=\"\"$dir\"\"\"
-Pop-Location",
-    "post_install": "
-# Set npm prefix to install modules inside bin
-Set-Content -Value \"prefix=$persist_dir\\bin`ncache=$persist_dir\\cache\" -Path $dir\\node_modules\\npm\\npmrc",
+    "installer": {
+        "args": [
+            "-i silent",
+            "-DLICENSE_ACCEPTED=TRUE",
+            "-DUSER_INSTALL_DIR=\"\"$dir\"\""
+        ]
+    },
+    "post_install": [
+        "# Set npm prefix to install modules inside bin and npm cache so they persist",
+        "Set-Content -Value \"prefix=$persist_dir\\bin`ncache=$persist_dir\\cache\" -Path \"$dir\\node_modules\\npm\\npmrc\""
+    ],
     "uninstaller": {
-        "file": "_ibm-node_uninstall.ps1"
+        "file": "_node_installation\\uninstall.exe",
+        "args": [
+            "-i silent"
+        ]
     },
     "checkver": {
         "url": "https://developer.ibm.com/node/sdk/v8/",
         "re": "//public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/([\\d.]+)/win/"
     },
     "autoupdate": {
-        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/$version/win/x86_64/ibm-$version-node-v$majorVersion.$minorVersion.$patchVersion-win-x64.exe#/_ibm-node_install.exe",
+        "architecture": {
+            "64bit": {
+                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/nodejs/$version/win/x86_64/ibm-$version-node-v$majorVersion.$minorVersion.$patchVersion-win-x64.exe#/_ibm-node_install.exe"
+            }
+        },
         "hash": {
             "url": "$url.sha256.txt"
         }
