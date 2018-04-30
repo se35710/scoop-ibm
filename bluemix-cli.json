@@ -12,7 +12,7 @@
             "hash": "sha1:83dc37f6e5f96f860b3103e2202b4aecf6bc6a07"
         }
     },
-    "depends": [
+    "suggests": [
         "7zip"
     ],
     "bin": [
@@ -23,13 +23,15 @@
         ],
         "bluemix_analytics.exe"
     ],
-    "pre_install": "Push-Location \"$dir\"
-Start-Process \"$dir\\Bluemix_CLI-setup.exe\" -Wait -ErrorAction Stop -ArgumentList \"/s /x /b\"\"$dir\"\" /v\"\"/qn\"\"\" -WindowStyle Hidden
-Start-Process \"7z.exe\" -WorkingDirectory \"$dir\" -Wait -ErrorAction Stop -ArgumentList \"e -y -bso0 -bd Bluemix_CLI.msi Data1.cab\" -WindowStyle Hidden
-Start-Process \"7z.exe\" -WorkingDirectory \"$dir\" -Wait -ErrorAction Stop -ArgumentList \"e -y -bso0 -bd Data1.cab\" -WindowStyle Hidden
-New-Item -ItemType Directory cfcli > $null
-Move-Item cf.exe cfcli >$null
-Pop-Location",
+    "pre_install": [
+        "Push-Location \"$dir\"",
+        "Start-Process \"$dir\\Bluemix_CLI-setup.exe\" -Wait -ErrorAction Stop -ArgumentList \"/s /x /b\"\"$dir\"\" /v\"\"/qn\"\"\" -WindowStyle Hidden",
+        "Start-Process \"7z.exe\" -WorkingDirectory \"$dir\" -Wait -ErrorAction Stop -ArgumentList \"e -y -bso0 -bd Bluemix_CLI.msi Data1.cab\" -WindowStyle Hidden",
+        "Start-Process \"7z.exe\" -WorkingDirectory \"$dir\" -Wait -ErrorAction Stop -ArgumentList \"e -y -bso0 -bd Data1.cab\" -WindowStyle Hidden",
+        "New-Item -ItemType Directory cfcli > $null",
+        "Move-Item cf.exe cfcli >$null",
+        "Pop-Location"
+    ],
     "post_install": "bx plugin update --all",
     "checkver": {
         "github": "https://github.com/IBM-Bluemix/bluemix-cli-release"
