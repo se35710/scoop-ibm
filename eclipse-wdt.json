@@ -25,7 +25,6 @@
             ]
         }
     },
-    "depends": "extras/find-java",
     "extract_dir": "eclipse",
     "installer": {
         "file": "eclipsec.exe",
