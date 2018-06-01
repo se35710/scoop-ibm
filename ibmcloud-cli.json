@@ -16,12 +16,16 @@
         "7zip"
     ],
     "bin": [
-        "bluemix.exe",
+        "ibmcloud.exe",
         [
-            "bluemix.exe",
+            "ibmcloud.exe",
+            "bluemix"
+        ],
+        [
+            "ibmcloud.exe",
             "bx"
         ],
-        "bluemix_analytics.exe"
+        "ibmcloud_analytics.exe"
     ],
     "pre_install": [
         "Push-Location \"$dir\"",
