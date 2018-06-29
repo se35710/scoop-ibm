@@ -2,25 +2,25 @@
     "description": "Eclipse IDE with IBM WebSphere Developer Tools",
     "homepage": "https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/",
     "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/oxygen/lafiles/en.html",
-    "version": "18.0.0.1.v20180313_0201",
+    "version": "18.0.0.2.v20180627_2035",
     "architecture": {
         "64bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/oxygen/wdt-update-site_18.0.0.1.v20180313_0201.zip#/wdt",
+                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/photon/wdt-update-site_18.0.0.2.v20180627_2035.zip#/wdt",
                 "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/2/eclipse-jee-oxygen-2-win32-x86_64.zip&r=1#/dl.7z"
             ],
             "hash": [
-                "f77d107144602b946d6fdb0f7d3bb1dfe1a022bd1f0aeb27cc9c97f2c28f7a15",
+                "e82959f0fdae608582e8528ee1294220b4f8c3b4f95180196d82da7702b5e11c",
                 "sha512:1d299f5d2663586d5ecdd75d68f12d4b31a93daf73bcefc670882e339c1250444b68f7fe30d942fc4c821042181061e6129469af2351e052f8a10e08aabfeb36"
             ]
         },
         "32bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/oxygen/wdt-update-site_18.0.0.1.v20180313_0201.zip#/wdt",
+                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/photon/wdt-update-site_18.0.0.2.v20180627_2035.zip#/wdt",
                 "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/2/eclipse-jee-oxygen-2-win32.zip&r=1#/dl.7z"
             ],
             "hash": [
-                "f77d107144602b946d6fdb0f7d3bb1dfe1a022bd1f0aeb27cc9c97f2c28f7a15",
+                "e82959f0fdae608582e8528ee1294220b4f8c3b4f95180196d82da7702b5e11c",
                 "sha512:c5902d3c6a60dc0fb93c23d78c8945e0f54b4ce8a6f9fca18a37240c02b5f1b03979f2b3d25ba5eb49dd1b7269eeca1e802b88a248f3b4b5d6d320341b43e46c"
             ]
         }
