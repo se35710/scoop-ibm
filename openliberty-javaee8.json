@@ -1,0 +1,35 @@
+{
+    "description": "Open Liberty with Java EE 8 Profile",
+    "homepage": "https://openliberty.io/",
+    "license": "EPL-1.0",
+    "version": "18.0.0.2",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/2018-06-19_0502/openliberty-javaee8-18.0.0.2.zip",
+    "hash": "284a4670cf12c093a47c068bc82e29403173d652d20b2b9308e06f0c8f10dd3e",
+    "extract_dir": "wlp",
+    "bin": [
+        "bin\\binaryLog.bat",
+        [
+            "bin\\client.bat",
+            "wlp-client"
+        ],
+        "bin\\ddlGen.bat",
+        "bin\\pluginUtility.bat",
+        "bin\\productInfo.bat",
+        "bin\\securityUtility.bat",
+        [
+            "bin\\server.bat",
+            "wlp"
+        ],
+        "bin\\serverSchemaGen.bat"
+    ],
+    "persist": "usr",
+    "checkver": {
+        "url": "https://openliberty.io/api/builds/data",
+        "jp": "$.latest_releases.runtime.driver_location",
+        "re": "/(?<build>[\\d_-]+)/openliberty-([\\d.]+).zip"
+    },
+    "autoupdate": {
+        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/$matchBuild/openliberty-javaee8-$version.zip"
+    },
+    "notes": "server.bat is renamed to wlp"
+}
