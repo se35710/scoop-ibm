@@ -1,10 +1,10 @@
 {
-    "description": "IBM WAS Liberty with Java EE 8 Web Profile",
+    "description": "IBM WAS Liberty with Java EE 7 Web Profile",
     "homepage": "https://developer.ibm.com/wasdev/websphere-liberty/",
     "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/18.0.0.2/lafiles/runtime/en.html",
     "version": "18.0.0.2",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/18.0.0.2/wlp-webProfile8-18.0.0.2.zip",
-    "hash": "9677df5951276048cc0fafce9aa3c7a35ca5198f28f9289af0bdbf4745440ff6",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/18.0.0.2/wlp-webProfile7-18.0.0.2.zip",
+    "hash": "47d29df519d036a3153c88461dbed81b1b20172f252f790248cc87f3954ae4e5",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
@@ -29,7 +29,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/$version/wlp-webProfile8-$version.zip",
+        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/$version/wlp-webProfile7-$version.zip",
         "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/$version/lafiles/runtime/en.html"
     },
     "notes": "server.bat is renamed to wlp"
