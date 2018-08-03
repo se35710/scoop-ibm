@@ -12,9 +12,6 @@
             "hash": "sha1:ce2149b989a4d7e879fc09e8a7a82eaf1b0be811"
         }
     },
-    "suggests": [
-        "7zip"
-    ],
     "bin": [
         "ibmcloud.exe",
         [
@@ -28,17 +25,17 @@
         "ibmcloud_analytics.exe"
     ],
     "pre_install": [
-        "Push-Location \"$dir\"",
+        "pushd \"$dir\"",
         "# Error 1605 mitigation",
         "Start-Process \"$dir\\dl.exe\" -Wait -ErrorAction Stop -ArgumentList \"/s /x /b\"\"$dir\"\" /v\"\"/qn\"\"\" -WindowStyle Hidden",
-        "7z.exe x -y Bluemix_CLI.msi Data1.cab | Out-Null",
-        "7z.exe x -y Data1.cab | Out-Null",
-        "New-Item -ItemType Directory cfcli | Out-Null",
-        "Move-Item cf.exe cfcli | Out-Null",
-        "Remove-Item Data1.cab",
-        "Remove-Item Bluemix_CLI.msi",
-        "Remove-Item dl.exe",
-        "Pop-Location"
+        "extract_7zip \"$dir\\Bluemix_CLI.msi\" \"$dir\\tmp\"",
+        "extract_7zip \"$dir\\tmp\\Data1.cab\" \"$dir\"",
+        "mkdir cfcli | out-null",
+        "mv cf.exe cfcli",
+        "rm -r tmp",
+        "rm Bluemix_CLI.msi",
+        "rm dl.exe",
+        "popd"
     ],
     "post_install": "bx plugin update --all",
     "checkver": {
