@@ -1,9 +1,9 @@
 {
     "homepage": "https://openliberty.io/",
     "license": "EPL-1.0",
-    "version": "18.0.0.2",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/2018-06-19_0502/openliberty-18.0.0.2.zip",
-    "hash": "5049b02b101b8a51e63a60a92186b9767e348ffa2bc658a1d726b14a33adc1f3",
+    "version": "18.0.0.3",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/2018-09-05_2337/openliberty-18.0.0.3.zip",
+    "hash": "0f376836f90703893f4d009001958df7c582ba0293166dc0a1e3bc6be3c1007c",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
