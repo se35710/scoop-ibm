@@ -2,9 +2,9 @@
     "description": "Open Liberty with Java EE 8 Profile",
     "homepage": "https://openliberty.io/",
     "license": "EPL-1.0",
-    "version": "18.0.0.2",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/2018-06-19_0502/openliberty-javaee8-18.0.0.2.zip",
-    "hash": "284a4670cf12c093a47c068bc82e29403173d652d20b2b9308e06f0c8f10dd3e",
+    "version": "18.0.0.3",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/2018-09-05_2337/openliberty-javaee8-18.0.0.3.zip",
+    "hash": "7faf2be0ece18a546e7bdf81c6e0dabe9609465c2717d1e31e7887257c828bc7",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
