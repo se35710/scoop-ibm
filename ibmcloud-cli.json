@@ -1,15 +1,15 @@
 {
-    "version": "0.10.0",
+    "version": "0.10.1",
     "homepage": "https://clis.ng.bluemix.net/ui/home.html",
     "license": "https://console.ng.bluemix.net/docs/navigation/notices.html",
     "architecture": {
         "64bit": {
-            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.10.0/win64#/dl.exe",
-            "hash": "sha1:829689ac0419db1ebed7e51373bd557f59c65c5e"
+            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.10.1/win64#/dl.exe",
+            "hash": "sha1:f3b647fe84768d4b2a7b0038a26e2706dd477c76"
         },
         "32bit": {
-            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.10.0/win32#/dl.exe",
-            "hash": "sha1:28a7960195a2bd05181adb4c6a9192a796f218db"
+            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.10.1/win32#/dl.exe",
+            "hash": "sha1:64a0a848cda61e00910e00cab78de07db3979488"
         }
     },
     "bin": [
