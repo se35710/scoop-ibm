@@ -4,14 +4,15 @@
     "license": "https://console.ng.bluemix.net/docs/navigation/notices.html",
     "architecture": {
         "64bit": {
-            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.10.1/win64#/dl.exe",
-            "hash": "sha1:262b876cd48d62ea85d0a5892fabbde386bcc163"
+            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.10.1/win64/archive#/dl.zip",
+            "hash": "sha1:58ec46697a2e2ecdedd4feaf2470b0e07e2df806"
         },
         "32bit": {
-            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.10.1/win32#/dl.exe",
-            "hash": "sha1:c2ec47e372efc75233c2d67f98f38a055ea80152"
+            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.10.1/win32/archive#/dl.zip",
+            "hash": "sha1:fa643aff26ea9f06094371f4104effb4b2d7f0d7"
         }
     },
+    "extract_dir": "IBM_Cloud_CLI",
     "bin": [
         "ibmcloud.exe",
         [
@@ -22,20 +23,7 @@
             "ibmcloud.exe",
             "bx"
         ],
-        "ibmcloud_analytics.exe"
-    ],
-    "pre_install": [
-        "pushd \"$dir\"",
-        "# Error 1605 mitigation",
-        "Start-Process \"$dir\\dl.exe\" -Wait -ErrorAction Stop -ArgumentList \"/s /x /b\"\"$dir\"\" /v\"\"/qn\"\"\" -WindowStyle Hidden",
-        "extract_7zip \"$dir\\IBM_Cloud_CLI.msi\" \"$dir\\tmp\"",
-        "extract_7zip \"$dir\\tmp\\Data1.cab\" \"$dir\"",
-        "mkdir cfcli | out-null",
-        "mv cf.exe cfcli",
-        "rm -r tmp",
-        "rm IBM_Cloud_CLI.msi",
-        "rm dl.exe",
-        "popd"
+        "ibmcloud-analytics.exe"
     ],
     "post_install": "bx plugin update --all",
     "checkver": {
@@ -44,10 +32,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://clis.ng.bluemix.net/download/bluemix-cli/$version/win64#/dl.exe"
+                "url": "https://clis.ng.bluemix.net/download/bluemix-cli/$version/win64/archive#/dl.zip"
             },
             "32bit": {
-                "url": "https://clis.ng.bluemix.net/download/bluemix-cli/$version/win32#/dl.exe"
+                "url": "https://clis.ng.bluemix.net/download/bluemix-cli/$version/win32/archive#/dl.zip"
             }
         },
         "hash": {
