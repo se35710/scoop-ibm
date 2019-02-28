@@ -1,10 +1,10 @@
 {
     "description": "IBM WAS Liberty with OSGi Applications",
     "homepage": "https://developer.ibm.com/wasdev/websphere-liberty/",
-    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.1/lafiles/runtime/en.html",
-    "version": "19.0.0.1",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.1/wlp-osgi-19.0.0.1.zip",
-    "hash": "1ee2516a971de26bb2536ab46431a536bcc068f860aea1cd090087b945ce831a",
+    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.2/lafiles/runtime/en.html",
+    "version": "19.0.0.2",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.2/wlp-osgi-19.0.0.2.zip",
+    "hash": "da0da1aa743692fc9a1bf841a9b204a97635f24fb92800e0a9bef1a00a1ed51a",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
