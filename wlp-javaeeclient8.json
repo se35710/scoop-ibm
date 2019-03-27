@@ -1,10 +1,10 @@
 {
     "description": "IBM WAS Liberty with Java EE 8 Application Client",
     "homepage": "https://developer.ibm.com/wasdev/websphere-liberty/",
-    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.2/lafiles/runtime/en.html",
-    "version": "19.0.0.2",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.2/wlp-javaeeClient8-19.0.0.2.zip",
-    "hash": "c5e5d2d1f4de14cc801d19f0b205bd8578334ea094fa1ff119749ef02ee96f39",
+    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.3/lafiles/runtime/en.html",
+    "version": "19.0.0.3",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.3/wlp-javaeeClient8-19.0.0.3.zip",
+    "hash": "ae22e97207982796680d6bd9f20e41ef592b1558c6b1afde9544105128fd5642",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
