@@ -1,10 +1,10 @@
 {
     "description": "IBM WAS Liberty Kernel",
     "homepage": "https://developer.ibm.com/wasdev/websphere-liberty/",
-    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.2/lafiles/runtime/en.html",
-    "version": "19.0.0.2",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.2/wlp-kernel-19.0.0.2.zip",
-    "hash": "7fbf15985b137e7d07711a6d6eb16e4eea1142b40f34f8a77a61254a795fbe7d",
+    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.3/lafiles/runtime/en.html",
+    "version": "19.0.0.3",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.3/wlp-kernel-19.0.0.3.zip",
+    "hash": "32ebe9e5f898c36af9be3d88ebaec999b2fbbca9e7141f14d49edebff61389ea",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
