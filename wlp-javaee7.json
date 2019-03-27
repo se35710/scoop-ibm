@@ -1,10 +1,10 @@
 {
     "description": "IBM WAS Liberty with Java EE 7 Full Platform",
     "homepage": "https://developer.ibm.com/wasdev/websphere-liberty/",
-    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.2/lafiles/runtime/en.html",
-    "version": "19.0.0.2",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.2/wlp-javaee7-19.0.0.2.zip",
-    "hash": "25b0aeb1252cbe76718f45ede531f2ea86dd4be167b7e78a34246516f5492cd4",
+    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.3/lafiles/runtime/en.html",
+    "version": "19.0.0.3",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/19.0.0.3/wlp-javaee7-19.0.0.3.zip",
+    "hash": "4b6f35d924053e159b66105e3baec57167a7b3fe13cf625c74476b4c6efdbf70",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
