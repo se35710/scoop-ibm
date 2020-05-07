@@ -1,10 +1,10 @@
 {
     "description": "IBM WAS Liberty with Java EE 8 Full Platform",
     "homepage": "https://developer.ibm.com/wasdev/websphere-liberty/",
-    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/20.0.0.4/lafiles/runtime/en.html",
-    "version": "20.0.0.4",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/20.0.0.4/wlp-javaee8-20.0.0.4.zip",
-    "hash": "8cd57ee2d6f190abaaa3945c5eb9addba2ce3a90fb8dd3ee728ba542a2c18e1b",
+    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/20.0.0.5/lafiles/runtime/en.html",
+    "version": "20.0.0.5",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/20.0.0.5/wlp-javaee8-20.0.0.5.zip",
+    "hash": "d4e2cf7d852cb0d4ece459a0304eb86b337cea40b1c8987a0586a5c73bf8391f",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
