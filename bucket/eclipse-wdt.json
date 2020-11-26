@@ -1,27 +1,17 @@
 {
     "description": "Eclipse IDE with IBM WebSphere Developer Tools",
-    "homepage": "https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/",
-    "license": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/photon/lafiles/en.html",
-    "version": "18.0.0.2.v20180627_2035",
+    "homepage": "https://www.ibm.com/cloud/websphere-liberty",
+    "license": "https://www.ibm.com/software/sla/sladb.nsf/lilookup/ECC6778DBF4CC09085258599007151EC?OpenDocument",
+    "version": "20.0.0.9.v20200826_1754",
     "architecture": {
         "64bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/photon/wdt-update-site_18.0.0.2.v20180627_2035.zip#/wdt",
-                "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/photon/R/eclipse-jee-photon-R-win32-x86_64.zip&r=1#/dl.7z"
+                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/2020-09/wdt-update-site_20.0.0.9.v20200826_1754.zip#/wdt",
+                "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-09/R/eclipse-jee-2020-09-R-win32-x86_64.zip&r=1#/dl.7z"
             ],
             "hash": [
-                "e82959f0fdae608582e8528ee1294220b4f8c3b4f95180196d82da7702b5e11c",
-                "sha512:86b09e3f3b22ec4aaad75f7771fe4efa1e24d0a51e0dcc47c66fef9cbd1eeb64d35204924e62318d819e26cc87a8f284f8d6e1182d1269824701f2c78398a88a"
-            ]
-        },
-        "32bit": {
-            "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/photon/wdt-update-site_18.0.0.2.v20180627_2035.zip#/wdt",
-                "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/photon/R/eclipse-jee-photon-R-win32.zip&r=1#/dl.7z"
-            ],
-            "hash": [
-                "e82959f0fdae608582e8528ee1294220b4f8c3b4f95180196d82da7702b5e11c",
-                "sha512:acac3d076b614f48286e025a5129481dadd9707034a6161f688566eb82cdf16af146ab2b349fd19050d65fb740715cabd24b0a38d9b4a788a6a6be48789ea7e6"
+                "f7338e7bd0f806e19e9f3c2f25f71de6ab767d814c0f9bdb812366116d038e57",
+                "sha512:8d12768c4377451f91e51bc9a42633313c90286a32c36909b59d76c4a7602cc87c369486ce3c4036335ce94ccedc1fe83482f6765e06f08d1d9572dc43217a9f"
             ]
         }
     },
@@ -31,7 +21,7 @@
         "args": [
             "-application org.eclipse.equinox.p2.director",
             "-noSplash",
-            "-repository jar:file:///$dir/wdt!/,http://download.eclipse.org/releases/photon",
+            "-repository jar:file:///$dir/wdt!/,http://download.eclipse.org/releases/2020-09",
             "-installIU was4d",
             "-followReferences"
         ],
@@ -44,16 +34,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/",
-        "re": "wdt/(?<release>[a-z]+)/wdt-update-site_((?<version>[\\d.]+[\\d]+).(?<build>v[\\d]+_[\\d]+)).zip"
+        "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/2020-09/?C=M;O=D",
+        "regex": "wdt-update-site_((?<version>[\\d.]+[\\d]+).(?<build>v[\\d]+_[\\d]+)).zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/$matchRelease/wdt-update-site_$version.zip#/wdt"
-            },
-            "32bit": {
-                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/$matchRelease/wdt-update-site_$version.zip#/wdt"
+                "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/2020-09/wdt-update-site_$version.zip#/wdt"
             }
         }
     }
