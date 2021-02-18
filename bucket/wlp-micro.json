@@ -2,9 +2,9 @@
     "description": "IBM WAS Liberty with Micro Profile for Enterprise Java",
     "homepage": "https://www.ibm.com/cloud/websphere-liberty",
     "license": "https://www.ibm.com/software/sla/sladb.nsf/lilookup/ECC6778DBF4CC09085258599007151EC?OpenDocument",
-    "version": "21.0.0.1",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/21.0.0.1/wlp-microProfile1-21.0.0.1.zip",
-    "hash": "432a0ae983e037a1a2056bac43215e60df7e02393caa513fe9fe54d2eecf17d4",
+    "version": "21.0.0.2",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/21.0.0.2/wlp-microProfile1-21.0.0.2.zip",
+    "hash": "af26e8157199eb84689314592a61f6a3cff30e8d133fee47a0723332ebd04d7d",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
