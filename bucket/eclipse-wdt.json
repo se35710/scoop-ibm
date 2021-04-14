@@ -2,15 +2,15 @@
     "description": "Eclipse IDE with IBM WebSphere Developer Tools",
     "homepage": "https://www.ibm.com/cloud/websphere-liberty",
     "license": "https://www.ibm.com/software/sla/sladb.nsf/lilookup/ECC6778DBF4CC09085258599007151EC?OpenDocument",
-    "version": "20.0.0.9.v20200826_1754",
+    "version": "21.0.0.3.v20210413_1438",
     "architecture": {
         "64bit": {
             "url": [
-                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/2020-09/wdt-update-site_20.0.0.9.v20200826_1754.zip#/wdt",
+                "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wdt/2020-09/wdt-update-site_21.0.0.3.v20210413_1438.zip#/wdt",
                 "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-09/R/eclipse-jee-2020-09-R-win32-x86_64.zip&r=1#/dl.7z"
             ],
             "hash": [
-                "f7338e7bd0f806e19e9f3c2f25f71de6ab767d814c0f9bdb812366116d038e57",
+                "a2288d434f8b2a484d21416148a7607d8b2a64e30a5fcb21dea59af8d7c5b942",
                 "sha512:8d12768c4377451f91e51bc9a42633313c90286a32c36909b59d76c4a7602cc87c369486ce3c4036335ce94ccedc1fe83482f6765e06f08d1d9572dc43217a9f"
             ]
         }
