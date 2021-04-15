@@ -2,9 +2,9 @@
     "description": "IBM WAS Liberty with Java EE 7 Application Client",
     "homepage": "https://www.ibm.com/cloud/websphere-liberty",
     "license": "https://www.ibm.com/software/sla/sladb.nsf/lilookup/ECC6778DBF4CC09085258599007151EC?OpenDocument",
-    "version": "21.0.0.3",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/21.0.0.3/wlp-javaeeClient7-21.0.0.3.zip",
-    "hash": "f7b2916b20e2894272b1713c3d580ad11b88b6fb71b06240aa4bb6ccba5ff96b",
+    "version": "21.0.0.4",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/21.0.0.4/wlp-javaeeClient7-21.0.0.4.zip",
+    "hash": "2b387e8614dee5d1e893dab3e9f1d276774737f131981a39e2462115da63438c",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
