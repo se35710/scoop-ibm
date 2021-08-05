@@ -2,9 +2,9 @@
     "description": "IBM WAS Liberty with Java EE 7 Web Profile",
     "homepage": "https://www.ibm.com/cloud/websphere-liberty",
     "license": "https://www.ibm.com/software/sla/sladb.nsf/lilookup/ECC6778DBF4CC09085258599007151EC?OpenDocument",
-    "version": "21.0.0.7",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/21.0.0.7/wlp-webProfile7-21.0.0.7.zip",
-    "hash": "df30ea5b485986b08c733100f65b990b4fe2d9a000cb9fabdaf8b6164c870878",
+    "version": "21.0.0.8",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/21.0.0.8/wlp-webProfile7-21.0.0.8.zip",
+    "hash": "59a5dd167f55154a438b6c2cd2fa264b3e846c128523011fa25a661a9e387f8a",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
