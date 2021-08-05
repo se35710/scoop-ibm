@@ -2,9 +2,9 @@
     "description": "IBM WAS Liberty Kernel",
     "homepage": "https://www.ibm.com/cloud/websphere-liberty",
     "license": "https://www.ibm.com/software/sla/sladb.nsf/lilookup/ECC6778DBF4CC09085258599007151EC?OpenDocument",
-    "version": "21.0.0.7",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/21.0.0.7/wlp-kernel-21.0.0.7.zip",
-    "hash": "f854c2f039d23a72f3624270c2a212cb3d4e3ad13881b42ece48a9e74bc9486a",
+    "version": "21.0.0.8",
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/21.0.0.8/wlp-kernel-21.0.0.8.zip",
+    "hash": "a74368ca086ce57d7b3eafaacaf100c682e8950f4da3c9d5b8b0c730b1bd16cc",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
